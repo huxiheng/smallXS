@@ -23,11 +23,34 @@
 - (void)setsubviews {
     self.backgroundColor =[UIColor clearColor];
     
-    self.imageSaoBJ = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, DeviceWidth, DeviceHeight)];
-    self.imageSaoBJ.image = [UIImage imageNamed:@"bg_qrcode_scan.png"];
+    self.upView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, DeviceWidth, kscaleIphone5DeviceLength(90))];
+    self.upView.backgroundColor = [UIColor colorWithWhite:0.7 alpha:0.9];
+    [self addSubview:self.upView];
+    
+    self.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, kscaleIphone5DeviceLength(90), (DeviceWidth-225)/2  , 225)];
+    self.leftView.backgroundColor = [UIColor colorWithWhite:0.7 alpha:1.0];
+    [self addSubview:self.leftView];
+    
+    self.downView = [[UIView alloc] initWithFrame:CGRectMake(0, kscaleIphone5DeviceLength(90)+225       , DeviceWidth  , DeviceHeight-(kscaleIphone5DeviceLength(90)+225))];
+    self.downView.backgroundColor = [UIColor colorWithWhite:0.7 alpha:1.0];
+    [self addSubview:self.downView];
+    
+    self.rightView = [[UIView alloc] initWithFrame:CGRectMake(DeviceWidth-(DeviceWidth-225)/2, kscaleIphone5DeviceLength(90), (DeviceWidth-225)/2  , 225)];
+    self.rightView.backgroundColor = [UIColor colorWithWhite:0.7 alpha:1.0];
+    [self addSubview:self.rightView];
+    
+    self.labelTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, DeviceWidth, 9)];
+    self.labelTitle.font = themeFont9;
+    self.labelTitle.textAlignment = NSTextAlignmentCenter;
+    self.labelTitle.textColor = [UIColor whiteColor];
+    self.labelTitle.text = @"将二维码对入取景框，即可自动扫描";
+    [self.downView addSubview:self.labelTitle];
+    
+    self.imageSaoBJ = [[UIImageView alloc] initWithFrame:CGRectMake((DeviceWidth-225)/2, kscaleIphone5DeviceLength(90), 225, 225)];
+    self.imageSaoBJ.image = [UIImage imageNamed:@"bg_scan_frame"];
     [self addSubview:self.imageSaoBJ];
     
-    self.lineImage =[[UIImageView alloc] initWithFrame:CGRectMake(kscaleIphone5DeviceLength(50), kscaleIphone5DeviceLength(90), DeviceWidth-kscaleIphone5DeviceLength(100), 2)];
+    self.lineImage =[[UIImageView alloc] initWithFrame:CGRectMake((DeviceWidth-225)/2, kscaleIphone5DeviceLength(90), 225, 2)];
     self.lineImage.image =[UIImage imageNamed:@"smline"];
     self.lineImage.backgroundColor = [UIColor orangeColor];
     [self addSubview:self.lineImage];
@@ -37,6 +60,10 @@
 - (void)hiddenSubviews:(BOOL)hidden {
     self.imageSaoBJ.hidden =hidden;
     self.lineImage.hidden =hidden;
+    self.upView.hidden = hidden;
+    self.downView.hidden = hidden;
+    self.leftView.hidden = hidden;
+    self.rightView.hidden = hidden;
 }
 - (void)bottonMyErWeiMaClicked:(UIButton *)btn{
 //    if(self.blockMyErWeiMa){
