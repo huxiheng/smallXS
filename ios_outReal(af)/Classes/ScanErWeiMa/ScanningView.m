@@ -24,7 +24,7 @@
     self.backgroundColor =[UIColor clearColor];
     
     self.upView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, DeviceWidth, kscaleIphone5DeviceLength(90))];
-    self.upView.backgroundColor = [UIColor colorWithWhite:0.7 alpha:0.9];
+    self.upView.backgroundColor = [UIColor colorWithWhite:0.7 alpha:1.0];
     [self addSubview:self.upView];
     
     self.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, kscaleIphone5DeviceLength(90), (DeviceWidth-225)/2  , 225)];
