@@ -22,7 +22,7 @@
 @implementation QRCodeViewController
 
 -(void)setData{
-    self.titleForNav = @"扫描条码";
+    self.titleForNav = @"二维码查询";
     
 }
 - (void)viewDidLoad {
@@ -75,8 +75,8 @@
 - (UIBarButtonItem *)returnBackBotton{
     UIBarButtonItem *leftItem =[[UIBarButtonItem alloc] init];
     UIButton *btnleftView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 65, 44)];
-    UIImageView *imageLeft = [[UIImageView alloc] initWithFrame:CGRectMake(0, 12, 20, 20)];
-    imageLeft.image = [UIImage imageNamed:@"btn_detail_back"];
+    UIImageView *imageLeft = [[UIImageView alloc] initWithFrame:CGRectMake(0, 14, 15, 15)];
+    imageLeft.image = [UIImage imageNamed:@"houtui"];
     [btnleftView addSubview:imageLeft];
     UILabel *lableLeft = [[UILabel alloc] initWithFrame:CGRectMake(20 , 0, 70, 44)];
     //    lableLeft.text = self.titleBackBtn;
@@ -137,8 +137,15 @@
             
             // 条码类型 AVMetadataObjectTypeQRCode
             //    _output.metadataObjectTypes =@[AVMetadataObjectTypeQRCode];
-            [_output setMetadataObjectTypes:[NSArray arrayWithObjects:AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code,AVMetadataObjectTypeQRCode,AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode93Code, nil]];
-           
+//            [_output setMetadataObjectTypes:[NSArray arrayWithObjects:AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code,AVMetadataObjectTypeQRCode,AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode93Code,AVMetadataObjectTypePDF417Code, nil]];
+            [_output setMetadataObjectTypes:[NSArray arrayWithObjects:AVMetadataObjectTypeUPCECode,AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode39Mod43Code,AVMetadataObjectTypeEAN13Code,AVMetadataObjectTypeEAN8Code,AVMetadataObjectTypeCode93Code,AVMetadataObjectTypeCode128Code,AVMetadataObjectTypePDF417Code,AVMetadataObjectTypeQRCode,AVMetadataObjectTypeAztecCode,AVMetadataObjectTypeInterleaved2of5Code,AVMetadataObjectTypeITF14Code,AVMetadataObjectTypeDataMatrixCode, nil]];
+            
+            [[NSNotificationCenter defaultCenter]addObserverForName:AVCaptureInputPortFormatDescriptionDidChangeNotification                                                        object:nil                                                        queue:[NSOperationQueue currentQueue]usingBlock:^(NSNotification*_Nonnull note){
+                _output.rectOfInterest=CGRectMake(0, 0, 1, 1);
+            }];
+            
+          
+            
             
             // Preview
             _preview =[AVCaptureVideoPreviewLayer layerWithSession:self.session];

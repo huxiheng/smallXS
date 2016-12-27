@@ -79,11 +79,11 @@
     self.labelTitle.textColor = [UIColor whiteColor];
     [self.imageViewBG addSubview:self.labelTitle];
     
-    self.labelVersion = [[UILabel alloc] initWithFrame:CGRectMake(0, kscaleDeviceHeight(252), DeviceWidth, 10)];
-    self.labelVersion.text=[NSString stringWithFormat:@"V%@",kVersion];
+    self.labelVersion = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, DeviceWidth, 16)];
+    self.labelVersion.text=[NSString stringWithFormat:@"版本号：%@",kVersion];
     self.labelVersion.textColor = [UIColor whiteColor];
-    self.labelVersion.font = themeFont10;
-    self.labelVersion.textAlignment = NSTextAlignmentCenter;
+    self.labelVersion.font = themeFont16;
+    self.labelVersion.textAlignment = NSTextAlignmentRight;
     [self.imageViewBG addSubview:_labelVersion];
     
     self.viewLog = [[UIView alloc] initWithFrame:CGRectMake((DeviceWidth-245)/2, kscaleDeviceLength(314), 245, kscaleDeviceLength(100))];

@@ -104,7 +104,7 @@ BOOL versionNameBiggerThan(NSString *versionName1,NSString *versionName2);
         }
     }];
     [connection setOnFailed:^(NSError *error) {
-        NSString *errorDescription = [error localizedDescription];
+        NSString *errorDescription = [NSError getErrorInfoResponseUTF8String:error];
         [SVProgressHUD dismissWithError:STRING_FORMAT(@"%@",errorDescription) afterDelay:2.5f];
     }];
     [connection setOnFinal:^{

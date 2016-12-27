@@ -150,6 +150,7 @@
 		D22083251D7D66CA00353233 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D22083221D7D66CA00353233 /* logo.png */; };
 		D22083261D7D66CA00353233 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D22083231D7D66CA00353233 /* logo@2x.png */; };
 		D22083271D7D66CA00353233 /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D22083241D7D66CA00353233 /* logo@3x.png */; };
+		D24B78D21DF7DB7400F70E54 /* NSError+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = D24B78D11DF7DB7400F70E54 /* NSError+Common.m */; };
 		D2D520591D6D476F00FE5F18 /* unqualifybaogaojielun.png in Resources */ = {isa = PBXBuildFile; fileRef = D2D520561D6D476F00FE5F18 /* unqualifybaogaojielun.png */; };
 		D2D5205A1D6D476F00FE5F18 /* unqualifybaogaojielun@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2D520571D6D476F00FE5F18 /* unqualifybaogaojielun@2x.png */; };
 		D2D5205B1D6D476F00FE5F18 /* unqualifybaogaojielun@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2D520581D6D476F00FE5F18 /* unqualifybaogaojielun@3x.png */; };
@@ -482,6 +483,8 @@
 		D22083221D7D66CA00353233 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		D22083231D7D66CA00353233 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		D22083241D7D66CA00353233 /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
+		D24B78D01DF7DB7400F70E54 /* NSError+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Common.h"; sourceTree = "<group>"; };
+		D24B78D11DF7DB7400F70E54 /* NSError+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Common.m"; sourceTree = "<group>"; };
 		D2D520561D6D476F00FE5F18 /* unqualifybaogaojielun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unqualifybaogaojielun.png; sourceTree = "<group>"; };
 		D2D520571D6D476F00FE5F18 /* unqualifybaogaojielun@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unqualifybaogaojielun@2x.png"; sourceTree = "<group>"; };
 		D2D520581D6D476F00FE5F18 /* unqualifybaogaojielun@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unqualifybaogaojielun@3x.png"; sourceTree = "<group>"; };
@@ -1220,6 +1223,8 @@
 				D2F9A4951D34E3F6003C0E10 /* UIDevice+Common.m */,
 				D2F9A48B1D34BA29003C0E10 /* UIColor+Common.h */,
 				D2F9A48C1D34BA29003C0E10 /* UIColor+Common.m */,
+				D24B78D01DF7DB7400F70E54 /* NSError+Common.h */,
+				D24B78D11DF7DB7400F70E54 /* NSError+Common.m */,
 				D2FC9D4E1D37269D00B857C3 /* NSString+Common.h */,
 				D2FC9D4F1D37269D00B857C3 /* NSString+Common.m */,
 				D2FC9D541D37288A00B857C3 /* Toast+UIView.h */,
@@ -1419,7 +1424,7 @@
 				ORGANIZATIONNAME = Lessu;
 				TargetAttributes = {
 					8B45ED571793A75E0081B32A = {
-						DevelopmentTeam = DW7TB8NK56;
+						DevelopmentTeam = 7KY9D5L76C;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1555,6 +1560,7 @@
 				D205867D1DD63CD100A33B5B /* XSShareObject.m in Sources */,
 				8B45ED6C1793A75F0081B32A /* AppDelegate.m in Sources */,
 				D2FC9D531D37280A00B857C3 /* SampleInfoViewController.m in Sources */,
+				D24B78D21DF7DB7400F70E54 /* NSError+Common.m in Sources */,
 				D21EF1751D35EA51008921F5 /* ReportCheckTabelCell.m in Sources */,
 				D217A5741DC71CC80098E967 /* AFNet.m in Sources */,
 				8B6D48881852BA030000D2BD /* LSFast.m in Sources */,
@@ -1749,7 +1755,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = DW7TB8NK56;
+				DEVELOPMENT_TEAM = 7KY9D5L76C;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Xieshi/Xieshi-Prefix.pch";
@@ -1761,7 +1767,7 @@
 					"$(PROJECT_DIR)/zbar",
 				);
 				OTHER_LDFLAGS = "-lxml2";
-				PRODUCT_BUNDLE_IDENTIFIER = com.scetia.Xieshi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scetia.XieshiG;
 				PRODUCT_NAME = Xieshi;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1777,7 +1783,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = DW7TB8NK56;
+				DEVELOPMENT_TEAM = 7KY9D5L76C;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Xieshi/Xieshi-Prefix.pch";
@@ -1789,7 +1795,7 @@
 					"$(PROJECT_DIR)/zbar",
 				);
 				OTHER_LDFLAGS = "-lxml2";
-				PRODUCT_BUNDLE_IDENTIFIER = com.scetia.Xieshi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scetia.XieshiG;
 				PRODUCT_NAME = Xieshi;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
